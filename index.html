@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yutu</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body class="my-body">
+    <!-- Responsive Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark nav-background-color py-4 px-5 shadow"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Yutu</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Responsive Navbar End -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 order-2 order-xl-1">
+          <div class="row card-row">
+            <div class="col-lg-3 my-card">
+              <a href="#" class="text-center text-white p-4 py-4"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-center text-white p-4    py-4"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-center text-white p-4    py-4"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-center text-white p-4    py-4"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+            <div class="col-lg-9 p-0 m-0">
+              <div
+                id="servicesContainer"
+                style="background-size: cover; background-position: center"
+              >
+                <!-- Services will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 order-1 order-xl-2">
+          <div class="row p-3 p-lg-5 pt-5 mt-lg-5">
+            <div class="col-lg-6 info-yutu  order-2 order-lg-1">
+              <h1 class="text-light fw-bold border-bottom border-2 py-2">My name is Yutu</h1>
+              <p class="text-light h5 lh-lg fw-light">
+                I am a Minecraft server developer with over 5 years of
+                experience. I specialize in creating custom plugins, server
+                management, and optimization. My goal is to provide high-quality
+                services that enhance your Minecraft experience. Whether you
+                need a custom plugin or help with server setup, I'm here to
+                assist you.
+              </p>
+              <!-- my discord server and minecraft server -->
+               <div class="d-flex flex-column py-3 py-lg-5">
+                <a
+                href="https://discord.gg/nV2uUGpKvv"
+                class="btn btn-danger mb-2"
+                target="_blank"
+                >Join my Discord</a
+              >
+             
+               </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+              <div class="row">
+                <div class="col-6 m-auto col-lg-12 py-4 p-lg-2">
+                  <img class="w-100 image-character" src="assets/img/ch.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+      let serviceList = [
+        {
+          title: "Custom Plugin Development",
+          desc: "Tailored plugins for unique gameplay mechanics.",
+          background: "assets/img/card/1.jpg",
+        },
+        {
+          title: "Server Management & Optimization",
+          desc: "Expert server management and performance tuning.",
+          background: "assets/img/card/2.jpg",
+        },
+        {
+          title: "Hosting Setup & Configuration",
+          desc: "Professional setup for VPS or dedicated hosting.",
+          background: "assets/img/card/4.jpg",
+        },
+        {
+          title: "Premade Server Setups",
+          desc: "Ready-to-use server setups for various game modes.",
+          background: "assets/img/card/3.jpg",
+        },
+        {
+          title: "Permission & Plugin Configuration",
+          desc: "Seamless configuration for plugins like LuckPerms.",
+          background: "assets/img/card/5.jpg",
+        },
+      ];
+
+      const servicesContainer = document.getElementById("servicesContainer");
+
+      serviceList.forEach((service) => {
+        const serviceCard = document.createElement("div");
+        serviceCard.className = "image-card mb-0";
+        serviceCard.style = `
+        height: 170px; 
+        width: 100%; 
+        background-image: url('${service.background}'); 
+        background-size: cover; 
+        background-position: center; 
+        color: white;
+      `;
+
+        serviceCard.innerHTML = `
+      <div class="h-100 d-flex flex-column justify-content-center p-3" style="background-color: rgba(0,0,0,0.7);">
+        <h5>${service.title}</h5>
+        <p class="small mb-0">${service.desc}</p>
+      </div>
+      `;
+
+        servicesContainer.appendChild(serviceCard);
+      });
+    </script>
+    <!-- Bootstrap 5 JS Bundle CDN (for navbar toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
