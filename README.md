@@ -4,13 +4,13 @@ Welcome to **Yutu**, a responsive and modern web portfolio for showcasing Minecr
 
 ## 🌐 Live Demo
 
-> *(Add link here if hosted on GitHub Pages, Netlify, or any hosting platform)*
+> *https://yutu-web.vercel.app/*
 
 ---
 
 ## 📸 Screenshot
 
-> *(Insert a screenshot of the website UI here if available)*
+> *<img src="assets/img/screenshot1.png" alt="Screenshot" width="400"/>*
 
 ---
 
