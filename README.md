@@ -76,7 +76,7 @@ Yutu/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/yutu.git
+git clone https://github.com/Lyher99/yutu_web
 ```
 
 2. Navigate to the project directory and open `index.html` in your browser:
